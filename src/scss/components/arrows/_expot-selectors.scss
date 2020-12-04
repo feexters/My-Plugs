@@ -1,0 +1,14 @@
+.arrow {
+    @extend %arrow;
+
+    /* SCROLL PAGE TO TOP*/
+    &.arrow_up {
+        @include arrow_theme(colors('primary'), $arrow_up, 15px);
+    }
+
+    /* SLIDE ARTICLES */
+    &.article-next__arrow {
+        @include arrow_theme(colors('dark'), $arrow_down, 10px);
+        @include arrow_moving;
+    }
+}

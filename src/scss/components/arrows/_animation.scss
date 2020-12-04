@@ -1,0 +1,18 @@
+@keyframes arrows {
+    from {
+        top: 0;
+        opacity: .2;
+    }
+    50% {
+        top: 10px;
+        opacity: 1;
+    }
+    90% {
+        top: 10px;
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+        top: 0;
+    }
+}

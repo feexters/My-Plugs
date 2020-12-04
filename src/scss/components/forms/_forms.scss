@@ -1,0 +1,26 @@
+input {
+    font-family: "Roboto", sans-serif;
+    padding: 0;
+    font-size: 1.8rem;
+
+    /* Search */
+    &[type="search"] {
+        background-color: rgba(colors('secondary_light'), opacity('high'));
+        border: none;
+        border-radius: 10px;
+    }
+
+    &:hover {
+        background-color: colors("secondary-light");
+        transition: background-color ease-in .3s;
+    }
+
+    &:focus {
+        background-color:colors('light');
+
+        &::placeholder {
+            color: transparent;
+            transition: color ease .3s;
+        }
+    }
+}

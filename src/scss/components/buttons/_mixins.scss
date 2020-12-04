@@ -1,0 +1,28 @@
+/* ANIMATION */
+@mixin  button_animation($top: 0, $right: 0, $bottom: 0, $left: 0) {
+    &::after {
+        transition: all .5s;
+    }
+    &:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    &::after {
+        top: $top;
+        bottom: $bottom;
+        left: $left;
+        right: $right;
+    }
+}
+
+/* THEME */
+@mixin  button_theme($color) {
+    border: 2px solid $color;
+    background-color: $color;
+
+    &:hover {
+        color: $color;
+    }
+}

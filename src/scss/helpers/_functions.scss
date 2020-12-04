@@ -1,0 +1,14 @@
+/* GET COLOR */
+@function colors($key: 'primary') {
+    @return map-get($colors, $key)
+};
+
+/* GET FONT */
+@function font-weight($key: 'medium') {
+    @return map-get($font_weight, $key)
+};
+
+/* GET OPACITY */
+@function opacity($key: 'medium') {
+    @return map-get($opacity, $key)
+};

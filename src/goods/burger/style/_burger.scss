@@ -1,0 +1,55 @@
+.burger {
+    &__icon {
+        display: block;
+        position: relative;
+        background-color: rgba($color: black, $alpha: .0);
+        box-shadow: none;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__line {
+        @include burger-line;
+        top: 46%;
+        left: 15%;
+        transition: background 0 .2s;
+
+        &::before {
+            @include burger-line;
+            width: $line_size;
+            height: $line_size;
+            top: $line-position;
+            transition: top $transition;
+        }
+        &::after {
+            @include burger-line;
+            width: $line_size;
+            height: $line_size;
+            bottom: $line-position;
+            transition: bottom $transition;
+        }
+    }
+}
+
+.burger__icon.is-open {
+
+    .burger__line {
+        background: none;
+    }
+
+    .burger__line::before {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    .burger__line::after {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .burger__line::after, .burger__line::before {
+        transition-delay:  0s, .3s;
+    }
+} 

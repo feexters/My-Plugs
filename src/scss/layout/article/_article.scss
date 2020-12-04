@@ -1,0 +1,41 @@
+.article {
+    max-width: $main_width;
+    margin: $margin_center;
+    margin-top: $article_margin;
+    font-family: $font_roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-wrap {
+        max-width: $wrap_width;
+        background-color: rgba(colors('secondary_light'), .5);
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: $shadow;
+
+
+        > div{
+            padding: $elem_padding;
+        }
+    }
+
+    &-title {
+        font-weight: font-weight('medium');
+        font-size: 3.6rem;
+        letter-spacing: 3px;
+    }
+
+    &-text {
+        font-size: 2.2rem;
+        font-weight: font-weight('light');
+    }
+
+    &-next {
+        font-weight: font-weight('light');
+        display: flex;
+        font-size: 2rem;
+        flex-direction: column;
+        cursor: pointer;
+    }
+}

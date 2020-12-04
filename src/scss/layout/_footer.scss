@@ -1,0 +1,82 @@
+.footer {
+    margin-top: 100px;
+    font-family: $font_roboto;
+    padding: 20px;
+    color: colors('secondary_light');
+    background-color: colors('primary');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    > div {
+        padding: 10px;
+    }
+
+    &-text {
+        font-size: 1.8rem;
+        font-weight: font-weight('light');
+        text-align: center;
+    }
+
+    &-contact {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.contact {
+    &__list {
+        display: block;
+        margin: 0 10px;
+    }
+
+    &__icon {
+        display: inline-block;
+        padding: 0 5px;
+        
+        a {
+            display: block;
+            width: 40px;
+            height: 40px; 
+        }
+    }
+
+    &__github {
+        background: url('@img/github.png');
+    }
+
+    &__gmail {
+        background: url('@img/gmail.png');
+    }
+
+    &__vk {
+        background: url('@img/vk.png');
+    }
+}
+
+@media (max-width: $media_medium) {
+    .contact {
+        &__list {
+            margin: 0 10px;
+        }
+    
+        &__icon {  
+            a {
+                width: 20px;
+                height: 20px; 
+            }
+        }
+    
+        &__github {
+            background: url('@img/github-small.png');
+        }
+    
+        &__gmail {
+            background: url('@img/gmail-small.png');
+        }
+    
+        &__vk {
+            background: url('@img/vk-small.png');
+        }
+    }
+}

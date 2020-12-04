@@ -1,0 +1,19 @@
+%button {
+    color: colors('light');
+    font: $button_font;
+    padding: $button_padding;
+    border-radius: $button_radius;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        background: colors('secondary_light');
+        position: absolute;
+        display: block;
+        z-index: -1;
+    }
+}

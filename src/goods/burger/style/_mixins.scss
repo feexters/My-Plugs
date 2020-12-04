@@ -1,0 +1,30 @@
+@mixin burger-user($color-theme: white, $size: 50px) {
+    width: $size;
+    height: $size;
+    border: 2px solid rgba($color: $color-theme, $alpha: 1);
+    border-radius: 10px;
+
+    > span {
+
+        &:before {
+            background-color: $color-theme;
+        }
+
+        &:after {
+            background-color: $color-theme;
+        }
+
+        background-color: $color-theme;
+    }
+}
+
+@mixin burger-line {
+    position: absolute;
+    display: block;
+    width: 70%;
+    height: 10%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    content: "";
+}

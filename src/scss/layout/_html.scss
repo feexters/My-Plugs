@@ -1,0 +1,11 @@
+@media (max-width: $main_width) {
+    html {
+        font-size: calc(8px + 2 * ((100vw - 320px) / (1440 - 320)));
+    }
+}
+
+@media (max-width: $media_small) {
+    html {
+        font-size: calc(7px + 2 * ((100vw - 320px) / (1440 - 320)));
+    }
+}

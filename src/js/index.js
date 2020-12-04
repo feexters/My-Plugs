@@ -1,0 +1,5 @@
+import '@scss/style.scss'
+import '@/js/scroll_to_top.js'
+import '@/js/slide_articles.js'
+import '@/js/appear.js'
+import '@/js/catalog.js'

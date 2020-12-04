@@ -1,0 +1,26 @@
+$colors: (
+    'primary': rgba(64, 86, 115, 1),
+    'secondary': rgba(208, 236, 242, 1),
+    'secondary_light':  rgba(234, 248, 249, 1),
+    'light': rgb(255, 255, 255),
+    'dark':  rgb(0, 0, 0),
+);
+
+$opacity: (
+    'none':    0,
+    'low':    .2,
+    'medium': .5,
+    'high':   .8,
+    'full':    1,
+);
+
+$main_width: 1440px;
+
+$margin_center: 0 auto;
+$margin_main: 0 8px;  
+
+$media_medium: 560px;
+$media_small: 340px;
+
+$shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.2);
+

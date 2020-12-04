@@ -1,0 +1,23 @@
+.button {
+    @extend %button;
+    @include button_theme(colors('primary'));
+
+    &.slide_from_left {
+        @include button_animation(0, 100%, 0, -100%);
+    }
+
+    &.slide_from_up {
+        @include button_animation(-100%, 0, 100%, 0);
+    }
+
+    &.slide_from_right {
+        @include button_animation(0, -100%, 0, 100%);
+    }
+
+    &.slide_from_mid {
+        @include button_theme(#A63CD4	);
+        @include button_animation(50%, 50%, 50%, 50%);
+        min-height: 70px;
+        border-radius: 10px;
+    }
+}

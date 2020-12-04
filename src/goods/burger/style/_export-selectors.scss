@@ -1,0 +1,7 @@
+.burger__icon {
+    @include burger-user(white, 46px);
+
+    &.burger_example {
+        @include burger-user(black, 80px)
+    }
+}

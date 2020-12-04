@@ -1,0 +1,72 @@
+body {
+    background: url('@img/background.png');
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    [data-appear=false] {
+        position: relative;
+        top: 50px;
+        opacity: opacity('none');
+        transition: all ease-in .3s;
+    }
+
+    [data-appear=true] {
+        position: relative;
+        top: 0;
+        opacity: opacity('full');
+        transition: all ease-in .3s;
+    }
+}
+
+.body-wrap {
+    margin: $margin_main;
+    flex: 1 0 auto;
+}
+
+/* SCROLL PAGE TO TOP */
+.scroll_to_top {
+    width: $scroll_size;
+    height: $scroll_size;
+    position: fixed;
+    right: 5%;
+    border: $scroll_border;
+    background-color: colors('secondary');
+    border-radius: $scroll_radius;
+    box-shadow: $shadow;
+    opacity: opacity('medium');
+    cursor: pointer;
+
+    > .arrow {
+        top: $scroll_arrow_pos;
+    }
+
+    &[data-show=false] {
+        top: 120%;
+        transition: top ease .5s;
+    }
+
+    &[data-show=true] {
+        top: 90%;
+        transition: top ease .5s;
+
+        &:hover {
+            opacity: opacity('high');
+            transition: opacity ease-in .3s;
+        }
+    }
+}
+
+@media (max-width: 560px){
+    body {
+        background: url('@img/background-medium.png');
+    }
+}
+
+@media (max-width: $media_small){
+    .scroll_to_top {
+        top: 92%;
+        right: 0;
+    }
+}

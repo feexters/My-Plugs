@@ -1,0 +1,67 @@
+$animation-speed: .5s;
+
+.slider {
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+
+    &-wrap {
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    &-arrow {
+        box-sizing: border-box;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: calc(50% - 10px);
+        border-right: 5px solid rgba($color: white, $alpha: .4);
+        border-bottom: 5px solid rgba($color: white, $alpha: .4);
+        z-index: 100;
+        cursor: pointer;
+
+        &.arrow__left {
+            transform: rotate(135deg);
+            left: 3%;
+        }
+    
+        &.arrow__right {
+            transform: rotate(-45deg);
+            right: 3%;
+        }
+
+        &:hover {
+            border-color: rgba($color: white, $alpha: .8);
+            transition: border-color 1s;
+        }
+    }
+
+    &-image {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+
+        &._from-right {
+            animation: fromRight linear $animation-speed
+        }
+
+        &._from-left {
+            animation: fromLeft linear $animation-speed
+        }
+
+        &._to-right {
+            animation: toRight linear $animation-speed
+        }
+
+        &._to-left {
+            animation: toLeft linear $animation-speed
+        }
+    }
+}
+
+@keyframes fromLeft { from { left: -100%; } to { left: 0; } }
+@keyframes fromRight { from { right: -100%; } to { right: 0; } }
+@keyframes toLeft { from { left: 0; } to { left: -100%; } }
+@keyframes toRight { from { right: 0; } to { right: -100%; } }
