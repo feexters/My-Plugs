@@ -67,4 +67,75 @@
             margin: 0 10px ;
         }
     }
+
+    &[data-show="true"] {
+        display: flex;
+    }
+
+    &[data-show="false"] {
+        display: none;
+    }
+}
+
+/* Filters */
+.catalog-filter {
+    width: 100%;
+
+    .filter {
+
+        &-menu {
+            padding-top: 10px;
+        }
+
+        &-show__item {
+            display: inline-block;
+            margin: 3px 10px;
+            border-radius: 2rem;
+            padding: 5px;
+            letter-spacing: 0.3rem;
+            font-weight: font-weight('light');
+            cursor: pointer;
+
+            &._active {
+                color: colors("secondary_light");
+                background-color: rgba(colors("primary"), opacity("full"));
+            }
+
+            &:hover {
+                background-color: rgba(colors("primary"), opacity("medium"));
+            }
+        }
+
+        &__icon {
+            cursor: pointer;
+        }
+
+    }
+
+    /* Menu is opened */
+    &[data-open="true"] {
+        .filter {
+            &__icon {
+                border-bottom: 2px solid colors("primary");
+            }
+
+            &-menu {
+                display: block;
+            }
+        }
+    }
+
+    /* Menu is closed */
+    &[data-open="false"] {
+
+        .filter {
+            &__icon {
+                border-bottom: none
+            }
+
+            &-menu {
+                display: none;
+            }
+        }
+    }
 }
