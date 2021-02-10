@@ -1,7 +1,7 @@
 {
-  "name": "myplugs",
+  "name": "krea",
   "version": "1.0.0",
-  "description": "This site was created as an pilot project",
+  "description": "It's one more traning project",
   "private": true,
   "scripts": {
     "dev": "npx webpack --mode development",
@@ -10,9 +10,9 @@
     "serve": "webpack serve"
   },
   "keywords": [
-    "plugins",
     "first-project",
-    "training"
+    "training",
+    "bootstrap"
   ],
   "author": "Danil Nepomnyashih <nepomnachihd@gmail.com>",
   "license": "ISC",

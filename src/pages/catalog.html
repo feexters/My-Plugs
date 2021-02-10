@@ -31,12 +31,18 @@
         <div class="catalog">
             <div class="catalog-wrap">
                 <div class="catalog-settings">
-                    <div class="catalog-filter">Filter</div>
+                    <div class="catalog-filter" data-open="false">
+                        <span class="filter__icon">Filter</span>
+                        <div class="filter-menu">
+                            <ul class="filter-show">
+                            </ul>
+                        </div>
+                    </div>
                     <div class="catalog-sort">Sort</div>
                 </div>
                 <div class="catalog-goods">
                     <!-- GOODS -->
-                    <div class="goods">
+                    <div class="goods" data-show="true">
                         <span class="goods__name">Burger Menu</span>
                         <div class="goods__picture">
                             <div class="burger">
@@ -51,7 +57,7 @@
                         </div>
                     </div>
 
-                    <div class="goods">
+                    <div class="goods" data-show="true">
                         <span class="goods__name">Modal Window</span>
                         <div class="goods__picture">
                             <button class="button slide_from_mid open-modal">OPEN MODAL</button>
@@ -62,7 +68,7 @@
                         </div>
                     </div>
 
-                    <div class="goods">
+                    <div class="goods" data-show="true">
                         <span class="goods__name">Simple Slider</span>
                         <div class="goods__picture">
                             <div class="slider-example"></div>
@@ -73,7 +79,7 @@
                         </div>
                     </div>
 
-                    <div class="goods">
+                    <div class="goods" data-show="true">
                         <span class="goods__name">Search</span>
                         <div class="goods__picture">
                             <div class="search-example">
