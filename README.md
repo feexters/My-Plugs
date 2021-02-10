@@ -9,7 +9,7 @@
 
 ### Сборка и запуск
 
-***Первый способ***: https://feexters.github.io/My-Plugs/index.html
+***Первый способ***: https://feexters.github.io/My-Plugs
 
 ***Второй способ***: скачать проект и в каталоге "docs"  открыть файл "index.html"
 
