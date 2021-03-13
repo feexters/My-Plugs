@@ -29,6 +29,10 @@
         align-items: stretch;
         justify-content: space-around;
     }
+
+    &-sort {
+        cursor: pointer;
+    }
 }
 
 /* GOODS */
@@ -56,7 +60,7 @@
 
     &__picture {
         max-width: 400px;
-        max-height: 200px;
+        min-height: 100px;
     }
 
     &__buttons {
@@ -79,7 +83,7 @@
 
 /* Filters */
 .catalog-filter {
-    width: 100%;
+    width: 90%;
 
     .filter {
 

@@ -1,0 +1,135 @@
+.file-loader {
+    margin: 3% 2%;
+
+    &__logo {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+}
+
+.btn {
+    width: 120px;
+    height: 35px;
+    font-size: 1.5rem;
+    margin: 10px 5px 0 5px;
+    border: 1px solid #61AC86;
+    border-radius: 18px;
+    background-color: white;
+    color: #61AC86;
+    outline: none;
+    cursor: pointer;
+
+    &_upload{
+        background-color: #61AC86;
+        color: white;
+    }
+
+    &.primary {
+        background-color: #61AC86;
+        color: white;
+    }
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5rem;
+
+    &-image {
+        position: relative;
+        margin: 0 .5rem .5rem 0;
+        overflow: hidden;
+
+        &.removing {
+            transform: scale(0);
+            transition: transform ease .3s;
+        }
+
+        img {
+            width: 180px;
+            height: auto;
+            display: block 
+        }
+
+        &:hover .preview__remove,
+        &:hover .preview-image__open {
+            opacity: 1;
+        }
+
+        &:hover .preview-info{
+            bottom: 0;
+        }
+
+        &__open {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0.4rem;
+            border-radius: 0 0 0 5px;
+            background-color: rgba(255, 255, 255, .5);
+            opacity: 0;
+            transition: opacity ease .3s;
+            cursor: pointer;
+
+            a {
+                color: black;
+                font-size: 1.4rem;
+            }
+        }
+
+        &__url {
+            display: none
+        }
+
+    }
+
+    &__remove {
+        opacity: 0;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-weight: bold;
+        background-color: rgba(255, 255, 255, .5);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity ease .3s;
+    }
+
+    &-info {
+        width: 100%;
+        min-height: 20px;
+        box-sizing: border-box;
+        position: absolute;
+        font-size: 1.2rem;
+        bottom: -30px;
+        right: 0;
+        font-weight: bold;
+        padding: .2rem;
+        background-color: rgba(255, 255, 255, .5);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: bottom ease .3s;
+
+        span {
+            display: block;
+        }
+
+        &__progress {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #61AC86;
+            text-align: center;
+            transition: width ease-in .22s;
+        }
+    }
+}
