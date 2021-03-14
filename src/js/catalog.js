@@ -1,8 +1,9 @@
 import '@goods/burger/burger.js'
 import '@goods/modal/example.js'
-import '@goods/slider/example.js'
+// import '@goods/slider/example.js'
 import '@goods/search/example.js'
 import '@goods/image-loader/app.js'
+import '@goods/adaptive_slider/app.js'
 
 const goods = document.body.querySelectorAll('.goods')
 const goodsNames = document.body.querySelectorAll('.goods__name')

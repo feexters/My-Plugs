@@ -1,4 +1,4 @@
-import './style/_slider.scss'
+// import './style/_slider.scss'
 import {template, addArrows, createSlides} from './functions'
 
 export class Slider { 

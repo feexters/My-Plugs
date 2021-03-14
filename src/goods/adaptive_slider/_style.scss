@@ -1,0 +1,46 @@
+$arrow_size: 30px;
+
+.slider {
+    max-width: 80%;
+    border: 2px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    &-line {
+        display: flex;
+        background: grey;
+        transition: all ease 1s;
+    }
+
+    &__image {
+        width: 100%;  
+    }
+
+    &__button {
+        width: $arrow_size;
+        height: $arrow_size;
+        background-color: rgba($color: white, $alpha: 0);
+        border: solid rgba($color: white, $alpha: .6);
+        border-width: 0 5px 5px 0;
+        position: absolute;
+        opacity: 0;
+        transition: opacity ease .3s;
+    }
+
+    &:hover .slider__button {
+        opacity: 1;
+    }
+
+    &__arrow-prev {
+        top: 45%;
+        left: 10px;
+        transform: rotate(135deg);
+    }
+
+    &__arrow-next {
+        top: 45%;
+        right: 10px;
+        transform: rotate(-45deg);
+    }
+}
