@@ -54,7 +54,6 @@ window.addEventListener('resize', () => {
 
 /* Scrolling slide */
 function rollSlider() {
-    console.log(count)
     $sliderLine.style.transform = 'translate(-' + count * width + 'px)'
 }
 
